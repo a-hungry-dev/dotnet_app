@@ -14,5 +14,27 @@ pipeline {
                 }
             }
         }
+
+        stage('Publish DotNet App') {
+            steps {
+                dir('dotnet_app') {
+                    sh (
+                        script: 'dotnet publish',
+                        returnStdout: true
+                    )
+                }
+            }
+        }
+
+        stage('Check DotNet App') {
+            steps {
+                dir('dotnet_app') {
+                    sh (
+                        script: 'ls',
+                        returnStdout: true
+                    )
+                }
+            }
+        }
     }
 }
