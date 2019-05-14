@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker 'mcr.microsoft.com/dotnet/core/sdk:2.1' }
+    agent { docker 'mcr.microsoft.com/dotnet/core/sdk:2.2' }
     environment {
         HOME = '/tmp'
     } 
