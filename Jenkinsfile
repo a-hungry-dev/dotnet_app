@@ -1,11 +1,7 @@
 pipeline {
-    agent {
-        docker {
-            image 'mcr.microsoft.com/dotnet/core/sdk:2.1'
-        }
-    }
+    agent { docker 'mcr.microsoft.com/dotnet/core/sdk:2.1' }
     stages {
-        stage('ls') {
+        stage('ell ess') {
             steps {
                 sh (
                     script: 'ls',
