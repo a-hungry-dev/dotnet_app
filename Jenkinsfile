@@ -6,6 +6,8 @@ pipeline {
     stages {
         stage('Restore NuGet Packages') {
             steps {
+                sh 'pwd'
+                sh 'ls'
                 sh (
                     script: 'dotnet restore',
                     returnStdout: true
